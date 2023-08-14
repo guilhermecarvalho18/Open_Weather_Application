@@ -12,3 +12,8 @@ def collect_weather_data():
 
     result = weather_service.fetch_weather_data(user_id)
     return jsonify(result), 201
+
+@bp.route('/weather/<user_id>', methods=['GET'])
+def get_progress(user_id):
+    progress = weather_service.calculate_progress(user_id)
+    return jsonify({'progress': progress})
