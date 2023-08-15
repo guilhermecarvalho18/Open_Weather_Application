@@ -1,3 +1,4 @@
+# /src/services/weather_service.py
 import requests
 import asyncio
 import httpx
@@ -43,7 +44,7 @@ def fetch_weather_data(user_id):
     responses = loop.run_until_complete(async_fetch(city_groups))
     
     # Flatten the list of responses
-    all_responses = [item for sublist in responses for item in sublist]
+    all_responses = [item for sublist in responses for item in sublist["list"]]
 
     # Store the results
     DATA_STORE[user_id] = {
@@ -63,3 +64,7 @@ def calculate_progress(user_id):
     total_cities = len(CITY_IDS.split(","))
     progress = (len(collected_data) / total_cities) * 100
     return progress
+
+def clear_data_store():
+    DATA_STORE.clear()
+
