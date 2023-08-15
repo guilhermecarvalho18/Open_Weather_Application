@@ -1,6 +1,6 @@
 # Open Weather Service
 
-A simple service that aggregates weather data from the OpenWeatherMap API and provides a progress tracking system for users.
+[Open Weather Application](https://github.com/guilhermecarvalho18/Open_Weather_Application) is a Flask-based service that fetches weather data from the OpenWeatherMap API based on a list of city IDs.
 
 ## Prerequisites
 
@@ -8,6 +8,7 @@ Before you begin, ensure you have the following installed:
 
 - Python 3.x
 - Docker (If you're using the Dockerized version of the application)
+- Flask: Flask is a lightweight web framework in Python. It provides tools, libraries, and technologies that allow you to build a web application. In this project, Flask serves as the foundation for setting up routes, handling HTTP requests, and rendering responses.
 - [OpenWeatherMap API Key](https://home.openweathermap.org/users/sign_up)
 
 ## Setup & Running
